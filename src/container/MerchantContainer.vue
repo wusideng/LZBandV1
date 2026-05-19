@@ -10,33 +10,21 @@
 
     <!-- 主内容区域 -->
     <main class="screen-body">
-      <!-- 左侧区域 -->
-      <aside class="left-panel">
-        <div class="placeholder-card">
-          <div class="card-title">日交易核心指标</div>
-          <div class="card-content">数据加载中...</div>
-        </div>
-      </aside>
+      <!-- 第一层：实时运营监控 -->
+      <RealtimeMetrics />
 
-      <!-- 中间区域 -->
-      <section class="center-panel">
-        <div class="placeholder-card core">
-          <div class="card-title">核心交易总览</div>
-          <div class="card-content">数据加载中...</div>
-        </div>
-      </section>
+      <!-- 第二层：经营趋势分析 -->
+      <!-- <TrendAnalysis /> -->
 
-      <!-- 右侧区域 -->
-      <aside class="right-panel">
-        <div class="placeholder-card">
-          <div class="card-title">渠道业务分析</div>
-          <div class="card-content">数据加载中...</div>
-        </div>
-      </aside>
+      <!-- 第三层：渠道业务分析 -->
+      <ChannelAnalysis />
+
+      <!-- 第四层：实时动态交易流 -->
+      <TransactionFlow />
     </main>
 
     <!-- 返回按钮 -->
-    <button class="back-btn" @click="goBack">← 返回首页</button>
+    <!-- <button class="back-btn" @click="goBack">← 返回首页</button> -->
   </div>
 </template>
 
@@ -45,6 +33,10 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import ParticleBackground from "../components/ParticleBackground.vue";
 import HeaderTitle from "../components/HeaderTitle.vue";
+import RealtimeMetrics from "../components/merchant/RealtimeMetrics.vue";
+import TrendAnalysis from "../components/merchant/TrendAnalysis.vue";
+import ChannelAnalysis from "../components/merchant/ChannelAnalysis.vue";
+import TransactionFlow from "../components/merchant/TransactionFlow.vue";
 
 const router = useRouter();
 const screenRef = ref(null);
@@ -93,6 +85,8 @@ onUnmounted(() => {
   position: relative;
   background: var(--bg-primary);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .back-btn {
@@ -117,50 +111,24 @@ onUnmounted(() => {
 .screen-header {
   position: relative;
   z-index: 10;
+  padding: 20px;
 }
 
 .screen-body {
+  flex: 1;
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column;
   position: relative;
   z-index: 10;
-}
+  overflow-y: auto;
 
-.left-panel,
-.right-panel {
-  flex-shrink: 0;
-  width: 380px;
-}
-
-.center-panel {
-  flex: 1;
-  min-width: 0;
-}
-
-.placeholder-card {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-
-  &.core {
-    background: rgba(0, 212, 255, 0.08);
-    border-color: rgba(0, 212, 255, 0.3);
+  &::-webkit-scrollbar {
+    width: 4px;
   }
 
-  .card-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-  }
-
-  .card-content {
-    color: var(--text-secondary);
-    font-size: 14px;
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 212, 255, 0.3);
+    border-radius: 2px;
   }
 }
 </style>

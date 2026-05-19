@@ -84,18 +84,26 @@ const screenList = ref([
   {
     name: '特约商户业务概览',
     module: '特约商户业务',
-    status: '开发中',
-    statusClass: 'developing',
+    status: '已完成',
+    statusClass: 'completed',
     path: '/merchant',
     date: '2025-05-19'
   },
   {
     name: '百合生活网',
     module: '百合生活业务',
+    status: '开发中',
+    statusClass: 'developing',
+    path: '/baihe',
+    date: '2025-05-19'
+  },
+  {
+    name: '快捷支付业务概览',
+    module: '快捷支付业务',
     status: '未开始',
     statusClass: 'todo',
     path: '/baihe',
-    date: '2025-05-19'
+    date: '2025-05-20'
   }
 ])
 
