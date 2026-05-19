@@ -1,6 +1,6 @@
 <template>
-  <OnlineContainer/>
+  <router-view />
 </template>
+
 <script setup>
-import OnlineContainer from './container/OnlineContainer.vue';
 </script>
