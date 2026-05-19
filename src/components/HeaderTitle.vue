@@ -1,7 +1,7 @@
 <template>
   <div class="header-title">
-    <div class="title-main">网金业务概览</div>
-    <!-- <div class="title-sub">网金业务概览</div> -->
+    <div class="title-main">{{ displayTitle }}</div>
+    <div v-if="displaySubtitle" class="title-sub">{{ displaySubtitle }}</div>
     <div class="header-info">
       <span class="current-time">{{ currentTime }}</span>
       <span class="update-time">数据更新: {{ updateTime }}</span>
@@ -10,8 +10,22 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { config } from '../mockData/wangjinData'
+
+const props = defineProps({
+  title: {
+    type: String,
+    default: ''
+  },
+  subtitle: {
+    type: String,
+    default: ''
+  }
+})
+
+const displayTitle = computed(() => props.title || '网金业务概览')
+const displaySubtitle = computed(() => props.subtitle)
 
 const currentTime = ref('')
 const updateTime = ref(config.updateTime)

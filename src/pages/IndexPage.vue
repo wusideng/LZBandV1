@@ -60,7 +60,7 @@
 
     <!-- 底部 -->
     <footer class="index-footer">
-      <p>兰州银行网金业务部 · 数据可视化大屏展示系统 · {{ currentYear }}</p>
+      <p>兰州银行 · 数据可视化大屏展示系统 · {{ currentYear }}</p>
     </footer>
   </div>
 </template>
