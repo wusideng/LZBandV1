@@ -28,7 +28,7 @@
             <tr>
               <th>序号</th>
               <th>统计图名称</th>
-              <th>统计模块</th>
+              <th>所属部门</th>
               <th>绘制状态</th>
               <th>调整链接</th>
               <th>日期</th>
@@ -83,7 +83,7 @@ const screenList = ref([
   },
   {
     name: '特约商户业务概览',
-    module: '特约商户业务',
+    module: '网金业务部',
     status: '已完成',
     statusClass: 'completed',
     path: '/merchant',
@@ -91,7 +91,7 @@ const screenList = ref([
   },
   {
     name: '百合生活网',
-    module: '百合生活业务',
+    module: '网金业务部',
     status: '开发中',
     statusClass: 'developing',
     path: '/baihe',
@@ -99,7 +99,15 @@ const screenList = ref([
   },
   {
     name: '快捷支付业务概览',
-    module: '快捷支付业务',
+    module: '网金业务部',
+    status: '未开始',
+    statusClass: 'todo',
+    path: '/baihe',
+    date: '2025-05-20'
+  },
+  {
+    name: '员工交易统计',
+    module: '机构管理部',
     status: '未开始',
     statusClass: 'todo',
     path: '/baihe',
