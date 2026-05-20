@@ -92,17 +92,17 @@ const screenList = ref([
   {
     name: '百合生活网',
     module: '网金业务部',
-    status: '开发中',
-    statusClass: 'developing',
+    status: '已完成',
+    statusClass: 'completed',
     path: '/baihe',
     date: '2025-05-19'
   },
   {
     name: '快捷支付业务概览',
     module: '网金业务部',
-    status: '未开始',
-    statusClass: 'todo',
-    path: '/baihe',
+    status: '已完成',
+    statusClass: 'completed',
+    path: '/quickpay',
     date: '2025-05-20'
   },
   {
@@ -110,7 +110,7 @@ const screenList = ref([
     module: '机构管理部',
     status: '未开始',
     statusClass: 'todo',
-    path: '/baihe',
+    path: '/',
     date: '2025-05-20'
   }
 ])
