@@ -3,7 +3,7 @@
     <ParticleBackground />
 
     <header class="screen-header-wrap">
-      <HeaderTitle title="个人金融经营分析驾驶舱" subtitle="个人金融部" />
+      <HeaderTitle title="个人金融经营分析" subtitle="个人金融部" />
     </header>
 
     <main class="screen-body">
