@@ -40,6 +40,12 @@ const routes = [
     component: () => import("../container/FinanceContainer.vue"),
     meta: { title: "个人金融经营分析驾驶舱" },
   },
+  {
+    path: "/channel",
+    name: "Channel",
+    component: () => import("../container/ChannelContainer.vue"),
+    meta: { title: "个人客户经营与渠道运营驾驶舱" },
+  },
 ];
 
 const router = createRouter({

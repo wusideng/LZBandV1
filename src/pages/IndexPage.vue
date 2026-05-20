@@ -28,7 +28,7 @@
             <tr>
               <th>序号</th>
               <th>统计图名称</th>
-              <th>所属部门</th>
+              <th>业务种类</th>
               <th>绘制状态</th>
               <th>调整链接</th>
               <th>日期</th>
@@ -75,7 +75,7 @@ const router = useRouter()
 const screenList = ref([
   {
     name: '网金业务概览',
-    module: '网金业务部',
+    module: '网金业务',
     status: '已完成',
     statusClass: 'completed',
     path: '/wangjin',
@@ -83,7 +83,7 @@ const screenList = ref([
   },
   {
     name: '特约商户业务概览',
-    module: '网金业务部',
+    module: '网金业务',
     status: '已完成',
     statusClass: 'completed',
     path: '/merchant',
@@ -91,7 +91,7 @@ const screenList = ref([
   },
   {
     name: '百合生活网',
-    module: '网金业务部',
+    module: '网金业务',
     status: '已完成',
     statusClass: 'completed',
     path: '/baihe',
@@ -99,7 +99,7 @@ const screenList = ref([
   },
   {
     name: '快捷支付业务概览',
-    module: '网金业务部',
+    module: '网金业务',
     status: '已完成',
     statusClass: 'completed',
     path: '/quickpay',
@@ -107,18 +107,18 @@ const screenList = ref([
   },
   {
     name: '个人金融经营分析驾驶舱',
-    module: '个人金融部',
+    module: '个人金融业务',
     status: '已完成',
     statusClass: 'completed',
     path: '/finance',
     date: '2025-05-20'
   },
   {
-    name: '员工交易统计',
-    module: '机构管理部',
-    status: '未开始',
-    statusClass: 'todo',
-    path: '/',
+    name: '个人客户经营与渠道运营驾驶舱',
+    module: '个人金融业务',
+    status: '已完成',
+    statusClass: 'completed',
+    path: '/channel',
     date: '2025-05-20'
   }
 ])
