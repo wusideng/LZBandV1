@@ -106,6 +106,14 @@ const screenList = ref([
     date: '2025-05-20'
   },
   {
+    name: '个人金融经营分析驾驶舱',
+    module: '个人金融部',
+    status: '已完成',
+    statusClass: 'completed',
+    path: '/finance',
+    date: '2025-05-20'
+  },
+  {
     name: '员工交易统计',
     module: '机构管理部',
     status: '未开始',

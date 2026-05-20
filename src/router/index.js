@@ -34,6 +34,12 @@ const routes = [
     component: () => import("../container/QuickpayContainer.vue"),
     meta: { title: "快捷支付业务概览" },
   },
+  {
+    path: "/finance",
+    name: "Finance",
+    component: () => import("../container/FinanceContainer.vue"),
+    meta: { title: "个人金融经营分析驾驶舱" },
+  },
 ];
 
 const router = createRouter({

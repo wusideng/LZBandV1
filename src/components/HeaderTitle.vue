@@ -59,7 +59,8 @@ onUnmounted(() => {
 .header-title {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 20px;
   position: relative;
   
   &::before, &::after {
@@ -72,8 +73,8 @@ onUnmounted(() => {
     background: linear-gradient(90deg, transparent, var(--primary), transparent);
   }
   
-  &::before { left: 50px; }
-  &::after { right: 50px; }
+  &::before { left: 80px; }
+  &::after { right: 80px; }
 }
 
 .title-main {
@@ -93,6 +94,10 @@ onUnmounted(() => {
 }
 
 .header-info {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
