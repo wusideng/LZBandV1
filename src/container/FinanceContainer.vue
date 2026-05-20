@@ -95,6 +95,18 @@ onUnmounted(() => {
   padding: 15px 24px 0;
 }
 
+// 仅在 Finance 页面覆盖 HeaderTitle 样式使其居中
+.screen-header-wrap :deep(.header-title) {
+  justify-content: center;
+}
+
+.screen-header-wrap :deep(.header-info) {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .screen-body {
   flex: 1;
   display: flex;
